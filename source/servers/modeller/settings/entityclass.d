@@ -1,4 +1,4 @@
-module servers.modeller.settings.entityclasses;
+module servers.modeller.settings.entityclass;
 
 @safe:
 import servers.modeller;

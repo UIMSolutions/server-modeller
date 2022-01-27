@@ -6,5 +6,5 @@ import servers.modeller;
 void uimAttributesView(HTTPServerRequest req, HTTPServerResponse res) {
   debugMethodCall(moduleName!uimAttributesView~":uimAttributesView");
 
-  MDLAttributesReadPageController(serverMdl).request(req, res);
+  MDLAttributesReadPageController(serverModeller).request(req, res);
 }

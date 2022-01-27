@@ -6,5 +6,5 @@ import servers.modeller;
 void uimAttributeClassesIndex(HTTPServerRequest req, HTTPServerResponse res) {
   debugMethodCall(moduleName!uimAttributeClassesIndex~":uimAttributeClassesIndex");
 
-  MDLAttributeClassesIndexPageController(serverMdl).request(req, res);
+  MDLAttributeClassesIndexPageController(serverModeller).request(req, res);
 }

@@ -2,26 +2,26 @@ module servers.modeller.actions.entityclasses;
 
 @safe:
 import servers.modeller;
-import servers.modeller.settings.entityclasses;
-import models.cms.entities.link;
+import servers.modeller.settings.entityclass;
+import models.modeller.entities.entityclass;
 
-void uimObjectClassesCreateAction(HTTPServerRequest req, HTTPServerResponse res) {
-  debugMethodCall(moduleName!uimObjectClassesCreateAction~":uimObjectClassesCreateAction");
+void uimEntityClassesCreateAction(HTTPServerRequest req, HTTPServerResponse res) {
+  debugMethodCall(moduleName!uimEntityClassesCreateAction~":uimEntityClassesCreateAction");
 
-  auto action = MDLAction_CreateAttributeClass(serverCms);
+  auto action = MDLAction_CreateAttributeClass(serverModeller);
   action.request(req, res);
 }
 
-void uimObjectClassesUpdateAction(HTTPServerRequest req, HTTPServerResponse res) {
-  debugMethodCall(moduleName!uimObjectClassesUpdateAction~":uimObjectClassesUpdateAction");
+void uimEntityClassesUpdateAction(HTTPServerRequest req, HTTPServerResponse res) {
+  debugMethodCall(moduleName!uimEntityClassesUpdateAction~":uimEntityClassesUpdateAction");
 
-  auto action = MDLAction_UpdateAttributeClass(serverCms);
+  auto action = MDLAction_UpdateAttributeClass(serverModeller);
   action.request(req, res);
 }
 
-void uimObjectClassesDeleteAction(HTTPServerRequest req, HTTPServerResponse res) {
-  debugMethodCall(moduleName!uimObjectClassesDeleteAction~":uimObjectClassesDeleteAction");
+void uimEntityClassesDeleteAction(HTTPServerRequest req, HTTPServerResponse res) {
+  debugMethodCall(moduleName!uimEntityClassesDeleteAction~":uimEntityClassesDeleteAction");
 
-  auto action = MDLAction_DeleteAttributeClass(serverCms);
+  auto action = MDLAction_DeleteAttributeClass(serverModeller);
   action.request(req, res);
 }

@@ -6,5 +6,5 @@ import servers.modeller;
 void uimAttributesCreate(HTTPServerRequest req, HTTPServerResponse res) {
   debugMethodCall(moduleName!uimAttributesCreate~":uimAttributesCreate");
 
-  MDLAttributesCreatePageController(serverMdl).request(req, res);
+  MDLAttributesCreatePageController(serverModeller).request(req, res);
 }

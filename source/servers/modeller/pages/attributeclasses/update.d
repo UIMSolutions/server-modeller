@@ -6,5 +6,5 @@ import servers.modeller;
 void uimAttributeClassesEdit(HTTPServerRequest req, HTTPServerResponse res) {
   debugMethodCall(moduleName!uimAttributeClassesEdit~":uimAttributeClassesEdit");
 
-  MDLAttributeClassesUpdatePageController(serverMdl).request(req, res);
+  MDLAttributeClassesUpdatePageController(serverModeller).request(req, res);
 }

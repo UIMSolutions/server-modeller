@@ -23,21 +23,21 @@ public import servers.modeller.pages;
 public import servers.modeller.settings;
 
 public import models.systems;
-public import models.cms;
+public import models.modeller;
 
 public import layouts.tabler;
 
 // mixin(ImportLocal!("cms"));
 
-DAPPApplication serverCms;
+DAPPApplication serverModeller;
 string[size_t] errorMessages;
 static this() {
-  serverCms = new class DAPPApplication {
+  serverModeller = new class DAPPApplication {
     this() { super(); 
       this
-      .layout(CMSLayout)
+      .layout(MDLLayout)
       .scripts.addLinks(
-        "/js/apps/cms/app.js");
+        "/js/apps/modeller/app.js");
     }
   };
 }

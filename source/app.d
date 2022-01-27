@@ -15,7 +15,7 @@ void main(string[] args) {
 		.get("/logout", &servermodeller.logoutPage.request);
  */
 	router // Pages
-		.get("/modeller", &uimmodellerPage);
+		.get("/modeller", &uimModellerPage);
 
 	router // Pages
 		.get("/modeller/attributes", &uimAttributesIndex)
@@ -97,7 +97,7 @@ void main(string[] args) {
 		debug writeln(tenant, " with ", database[tenant].collectionNames);
 	}
 
-  servermodeller.database(database);
+  serverModeller.database(database);
 	// servermodeller.rootPath(rootPath).registerApp(router); 
 
   mixin(SetHTTP!());

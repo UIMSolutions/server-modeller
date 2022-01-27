@@ -1,4 +1,4 @@
-module servers.modeller.settings.attributes;
+module servers.modeller.settings.attribute;
 
 @safe:
 import servers.modeller;
