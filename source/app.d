@@ -73,24 +73,31 @@ void main(string[] args) {
 	debug writeln("Create Database");
 	auto database = ETBBase.importDatabase(JSBFileBase("../../DATABASES/uim"));
 	debug writeln("Found Tenants:", database.count);
-	// central tenant
-	auto tentant = database["central"];
-	foreach(name; [	"accounts", "apps", "groups", "logins", "organizations", "passwords", 
-									"passwordrules", "tenants", "requests", "rights", "roles", "sessions", "sites", "users"]) {
-		tentant[name].entityPath("system/"~name);
-	}
 
-	tentant = database["systems"];
-	foreach(name; [	"accounts", "apps", "groups", "logins", "organizations", "passwords", 
-									"passwordrules", "tenants", "requests", "rights", "roles", "sessions", "sites", "users"]) {
-		tentant[name].entityPath("systems/"~name);
-	}
+	if (auto dbTentant = database["systems"]) {
+		debug writeln("Found tentant");
+
+		foreach(name; dbTentant.collectionNames) {
+			debug writeln("uimEntityRegistry name:", name, " path:", name);
+		
+			if (auto entityTemplate = uimEntityRegistry[name]) {
+				debug writeln("entityid = ", uimEntityRegistry[name].id);
+		
+				dbTentant[name].entityTemplate(entityTemplate);
+	}}}
 
 	// individual tenant
-	tentant = database["uim"];
-	foreach(name; [ "blogs", "demos", "attributeclasses", "glossary", "entityclasses", "news", "offers", "pages", "themes", "tutorials"]) {
-		tentant[name].entityPath("modeller/"~name);
-	}
+	if (auto dbTentant = database["uim"]) {
+		debug writeln("Found tentant");
+
+		foreach(name; dbTentant.collectionNames) {
+			debug writeln("uimEntityRegistry name:", name, " path:", name);
+
+			if (auto entityTemplate = uimEntityRegistry[name]) {
+				debug writeln("entityid = ", uimEntityRegistry[name].id);
+	
+				dbTentant[name].entityTemplate(entityTemplate);
+	}}}
 
 	debug writeln(database.tenantNames);
 	foreach(tenant; database.tenantNames) {

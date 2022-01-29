@@ -5,20 +5,14 @@ import servers.modeller;
 
 void uimSites(HTTPServerRequest req, HTTPServerResponse res) {
   debugMethodCall(moduleName!uimSites~":uimSites");
-  STRINGAA reqParameters = readRequestParameters(req, null); 
 
-  auto myController = APPPageController;
-  myController.view(APPView.layout(MDLLayout));
-
-  auto responseContent = myController.view.render(reqParameters); 
-  res.writeBody(responseContent, "text/html");
+  APPPageController(serverModeller).request(req, res);
 }
 
 void uimSiteSelectAction(HTTPServerRequest req, HTTPServerResponse res) {
   debugMethodCall(moduleName!uimSiteSelectAction~":uimSiteSelectAction");
 
-  auto action = APPSelectSiteActionController(serverModeller);
-  action.request(req, res);
+  APPSelectSiteActionController(serverModeller).request(req, res);
 }
 /* 
 static this() {
