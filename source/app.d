@@ -25,7 +25,7 @@ void main(string[] args) {
 		.get("/modeller/attributes/edit", &uimAttributesEdit)
 		.get("/modeller/attributes/delete", &uimAttributesDelete);
 
-	router // Actions
+	router // Attributes Actions
 		.post("/modeller/attributes/actions/create", &uimAttributesCreateAction)
 		.post("/modeller/attributes/actions/save", &uimAttributesUpdateAction)
 		.post("/modeller/attributes/actions/delete", &uimAttributesDeleteAction);
@@ -38,7 +38,7 @@ void main(string[] args) {
 		.get("/modeller/attributeclasses/edit", &uimAttributeClassesEdit)
 		.get("/modeller/attributeclasses/delete", &uimAttributeClassesDelete);
 
-	router // Actions
+	router // AttributeClasses Actions
 		.post("/modeller/attributeclasses/actions/create", &uimAttributeClassesCreateAction)
 		.post("/modeller/attributeclasses/actions/save", &uimAttributeClassesUpdateAction)
 		.post("/modeller/attributeclasses/actions/delete", &uimAttributeClassesDeleteAction);
@@ -51,10 +51,23 @@ void main(string[] args) {
 		.get("/modeller/entityclasses/edit", &uimEntityClassesEdit)
 		.get("/modeller/entityclasses/delete", &uimEntityClassesDelete);
 
-	router // Actions
+	router // EntityClasses Actions
 		.post("/modeller/entityclasses/actions/create", &uimEntityClassesCreateAction)
 		.post("/modeller/entityclasses/actions/save", &uimEntityClassesUpdateAction)
 		.post("/modeller/entityclasses/actions/delete", &uimEntityClassesDeleteAction);
+	
+	router
+		.get("/modeller/models", &uimModelsIndex)
+		.get("/modeller/models/", &uimModelsIndex)
+		.get("/modeller/models/view", &uimModelsView)
+		.get("/modeller/models/create", &uimModelsCreate)
+		.get("/modeller/models/edit", &uimModelsEdit)
+		.get("/modeller/models/delete", &uimModelsDelete);
+
+	router // Models Actions
+		.post("/modeller/models/actions/create", &uimModelsCreateAction)
+		.post("/modeller/models/actions/save", &uimModelsUpdateAction)
+		.post("/modeller/models/actions/delete", &uimModelsDeleteAction);
 
 	router
 		.get("/", &uimIndex)
