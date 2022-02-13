@@ -57,6 +57,32 @@ void main(string[] args) {
 		.post("/modeller/entityclasses/actions/delete", &uimEntityClassesDeleteAction);
 	
 	router
+		.get("/modeller/libraries", &uimLibrariesIndex)
+		.get("/modeller/libraries/", &uimLibrariesIndex)
+		.get("/modeller/libraries/view", &uimLibrariesView)
+		.get("/modeller/libraries/create", &uimLibrariesCreate)
+		.get("/modeller/libraries/edit", &uimLibrariesEdit)
+		.get("/modeller/libraries/delete", &uimLibrariesDelete);
+
+	router // Libraries Actions
+		.post("/modeller/libraries/actions/create", &uimLibrariesCreateAction)
+		.post("/modeller/libraries/actions/save", &uimLibrariesUpdateAction)
+		.post("/modeller/libraries/actions/delete", &uimLibrariesDeleteAction);
+
+	router
+		.get("/modeller/methods", &uimMethodsIndex)
+		.get("/modeller/methods/", &uimMethodsIndex)
+		.get("/modeller/methods/view", &uimMethodsView)
+		.get("/modeller/methods/create", &uimMethodsCreate)
+		.get("/modeller/methods/edit", &uimMethodsEdit)
+		.get("/modeller/methods/delete", &uimMethodsDelete);
+
+	router // Methods Actions
+		.post("/modeller/methods/actions/create", &uimMethodsCreateAction)
+		.post("/modeller/methods/actions/save", &uimMethodsUpdateAction)
+		.post("/modeller/methods/actions/delete", &uimMethodsDeleteAction);
+
+	router
 		.get("/modeller/models", &uimModelsIndex)
 		.get("/modeller/models/", &uimModelsIndex)
 		.get("/modeller/models/view", &uimModelsView)
@@ -68,6 +94,32 @@ void main(string[] args) {
 		.post("/modeller/models/actions/create", &uimModelsCreateAction)
 		.post("/modeller/models/actions/save", &uimModelsUpdateAction)
 		.post("/modeller/models/actions/delete", &uimModelsDeleteAction);
+
+	router
+		.get("/modeller/modules", &uimModulesIndex)
+		.get("/modeller/modules/", &uimModulesIndex)
+		.get("/modeller/modules/view", &uimModulesView)
+		.get("/modeller/modules/create", &uimModulesCreate)
+		.get("/modeller/modules/edit", &uimModulesEdit)
+		.get("/modeller/modules/delete", &uimModulesDelete);
+
+	router // Modules Actions
+		.post("/modeller/modules/actions/create", &uimModulesCreateAction)
+		.post("/modeller/modules/actions/save", &uimModulesUpdateAction)
+		.post("/modeller/modules/actions/delete", &uimModulesDeleteAction);
+
+	router
+		.get("/modeller/packages", &uimPackagesIndex)
+		.get("/modeller/packages/", &uimPackagesIndex)
+		.get("/modeller/packages/view", &uimPackagesView)
+		.get("/modeller/packages/create", &uimPackagesCreate)
+		.get("/modeller/packages/edit", &uimPackagesEdit)
+		.get("/modeller/packages/delete", &uimPackagesDelete);
+
+	router // Packages Actions
+		.post("/modeller/packages/actions/create", &uimPackagesCreateAction)
+		.post("/modeller/packages/actions/save", &uimPackagesUpdateAction)
+		.post("/modeller/packages/actions/delete", &uimPackagesDeleteAction);
 
 	router
 		.get("/", &uimIndex)
