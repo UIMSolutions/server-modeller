@@ -10,7 +10,11 @@ public import servers.modeller.pages.index;
 public import servers.modeller.pages.attributes;
 public import servers.modeller.pages.attributeclasses;
 public import servers.modeller.pages.entityclasses;
+public import servers.modeller.pages.libraries;
+public import servers.modeller.pages.methods;
 public import servers.modeller.pages.models;
+public import servers.modeller.pages.modules;
+public import servers.modeller.pages.packages;
 
 // Modules
 public import servers.modeller.pages.error;
