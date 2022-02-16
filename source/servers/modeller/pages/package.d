@@ -7,9 +7,13 @@ import servers.modeller;
 public import servers.modeller.pages.index;
 
 // Packages
+public import servers.modeller.pages.apis;
+public import servers.modeller.pages.apps;
 public import servers.modeller.pages.attributes;
 public import servers.modeller.pages.attributeclasses;
+public import servers.modeller.pages.classes;
 public import servers.modeller.pages.entityclasses;
+public import servers.modeller.pages.interfaces;
 public import servers.modeller.pages.libraries;
 public import servers.modeller.pages.methods;
 public import servers.modeller.pages.models;

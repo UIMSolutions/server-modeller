@@ -17,6 +17,32 @@ void main(string[] args) {
 	router // Pages
 		.get("/modeller", &uimModellerPage);
 
+router // Pages
+		.get("/modeller/apis", &uimApisIndex)
+		.get("/modeller/apis/", &uimApisIndex)
+		.get("/modeller/apis/view", &uimApisView)
+		.get("/modeller/apis/create", &uimApisCreate)
+		.get("/modeller/apis/edit", &uimApisEdit)
+		.get("/modeller/apis/delete", &uimApisDelete);
+
+	router // Apis Actions
+		.post("/modeller/apis/actions/create", &uimApisCreateAction)
+		.post("/modeller/apis/actions/save", &uimApisUpdateAction)
+		.post("/modeller/apis/actions/delete", &uimApisDeleteAction);
+
+router // Pages
+		.get("/modeller/apps", &uimAppsIndex)
+		.get("/modeller/apps/", &uimAppsIndex)
+		.get("/modeller/apps/view", &uimAppsView)
+		.get("/modeller/apps/create", &uimAppsCreate)
+		.get("/modeller/apps/edit", &uimAppsEdit)
+		.get("/modeller/apps/delete", &uimAppsDelete);
+
+	router // Apps Actions
+		.post("/modeller/apps/actions/create", &uimAppsCreateAction)
+		.post("/modeller/apps/actions/save", &uimAppsUpdateAction)
+		.post("/modeller/apps/actions/delete", &uimAppsDeleteAction);
+
 	router // Pages
 		.get("/modeller/attributes", &uimAttributesIndex)
 		.get("/modeller/attributes/", &uimAttributesIndex)
@@ -43,6 +69,19 @@ void main(string[] args) {
 		.post("/modeller/attributeclasses/actions/save", &uimAttributeClassesUpdateAction)
 		.post("/modeller/attributeclasses/actions/delete", &uimAttributeClassesDeleteAction);
 
+router // Pages
+		.get("/modeller/classes", &uimClassesIndex)
+		.get("/modeller/classes/", &uimClassesIndex)
+		.get("/modeller/classes/view", &uimClassesView)
+		.get("/modeller/classes/create", &uimClassesCreate)
+		.get("/modeller/classes/edit", &uimClassesEdit)
+		.get("/modeller/classes/delete", &uimClassesDelete);
+
+	router // Classes Actions
+		.post("/modeller/classes/actions/create", &uimClassesCreateAction)
+		.post("/modeller/classes/actions/save", &uimClassesUpdateAction)
+		.post("/modeller/classes/actions/delete", &uimClassesDeleteAction);
+
 	router
 		.get("/modeller/entityclasses", &uimEntityClassesIndex)
 		.get("/modeller/entityclasses/", &uimEntityClassesIndex)
@@ -55,7 +94,20 @@ void main(string[] args) {
 		.post("/modeller/entityclasses/actions/create", &uimEntityClassesCreateAction)
 		.post("/modeller/entityclasses/actions/save", &uimEntityClassesUpdateAction)
 		.post("/modeller/entityclasses/actions/delete", &uimEntityClassesDeleteAction);
-	
+
+router // Pages
+		.get("/modeller/interfaces", &uimInterfacesIndex)
+		.get("/modeller/interfaces/", &uimInterfacesIndex)
+		.get("/modeller/interfaces/view", &uimInterfacesView)
+		.get("/modeller/interfaces/create", &uimInterfacesCreate)
+		.get("/modeller/interfaces/edit", &uimInterfacesEdit)
+		.get("/modeller/interfaces/delete", &uimInterfacesDelete);
+
+	router // Interfaces Actions
+		.post("/modeller/interfaces/actions/create", &uimInterfacesCreateAction)
+		.post("/modeller/interfaces/actions/save", &uimInterfacesUpdateAction)
+		.post("/modeller/interfaces/actions/delete", &uimInterfacesDeleteAction);
+
 	router
 		.get("/modeller/libraries", &uimLibrariesIndex)
 		.get("/modeller/libraries/", &uimLibrariesIndex)
