@@ -2,19 +2,24 @@ import vibe.vibe;
 import servers.modeller;
 
 mixin DefaultConfig!("server-modeller");
-mixin ReadConfig;
+//mixin ReadConfig;
 void main(string[] args) {
-  readConfig();
-  mixin GetoptConfig;
+	debug writeln("readConfig()");
+  // readConfig();
+
+	debug writeln("mixin GetoptConfig");
+  //mixin GetoptConfig;
   
 	auto router = new URLRouter;	
+	debug writeln("SetRouterDefault!()");
   mixin(SetRouterDefault!());
 
 /* 	router
 		.get("/login", &servermodeller.loginPage.request)
 		.get("/logout", &servermodeller.logoutPage.request);
  */
-	router // Pages
+debug writeln("Setting router");
+router // Pages
 		.get("/modeller", &uimModellerPage);
 
 router // Pages
@@ -191,6 +196,7 @@ router // Pages
 	auto database = ETBBase.importDatabase(JSBFileBase("../../DATABASES/uim"));
 	debug writeln("Found Tenants:", database.count);
 
+	debug writeln("auto dbTentant = database[system]");
 	if (auto dbTentant = database["systems"]) {
 		debug writeln("Found tentant");
 
@@ -203,7 +209,7 @@ router // Pages
 				dbTentant[name].entityTemplate(entityTemplate);
 	}}}
 
-	// individual tenant
+	debug writeln("auto dbTentant = database[uim]");
 	if (auto dbTentant = database["uim"]) {
 		debug writeln("Found tentant");
 
@@ -221,6 +227,7 @@ router // Pages
 		debug writeln(tenant, " with ", database[tenant].collectionNames);
 	}
 
+	debug writeln("serverModeller.database(database)");
   serverModeller.database(database);
 	// servermodeller.rootPath(rootPath).registerApp(router); 
 
