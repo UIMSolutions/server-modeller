@@ -222,7 +222,7 @@ router // Pages
 				dbTentant[name].entityTemplate(entityTemplate);
 	}}}
 
-	debug writeln(database.tenantNames);
+	debug writeln("database.tenantNames -> ", database.tenantNames);
 	foreach(tenant; database.tenantNames) {
 		debug writeln(tenant, " with ", database[tenant].collectionNames);
 	}
