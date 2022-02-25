@@ -24,7 +24,7 @@ router // Pages
 
 router // Pages
 		.get("/modeller/apis", &uimApisIndex)
-		.get("/modeller/apis/", &uimApisIndex)
+		.get("/modeller/apis/:entityName", &uimApisIndex)
 		.get("/modeller/apis/view", &uimApisView)
 		.get("/modeller/apis/create", &uimApisCreate)
 		.get("/modeller/apis/edit", &uimApisEdit)
@@ -37,7 +37,7 @@ router // Pages
 
 router // Pages
 		.get("/modeller/apps", &uimAppsIndex)
-		.get("/modeller/apps/", &uimAppsIndex)
+		.get("/modeller/apps/:entityName", &uimAppsIndex)
 		.get("/modeller/apps/view", &uimAppsView)
 		.get("/modeller/apps/create", &uimAppsCreate)
 		.get("/modeller/apps/edit", &uimAppsEdit)
@@ -50,7 +50,7 @@ router // Pages
 
 	router // Pages
 		.get("/modeller/attributes", &uimAttributesIndex)
-		.get("/modeller/attributes/", &uimAttributesIndex)
+		.get("/modeller/attributes/:entityName", &uimAttributesIndex)
 		.get("/modeller/attributes/view", &uimAttributesView)
 		.get("/modeller/attributes/create", &uimAttributesCreate)
 		.get("/modeller/attributes/edit", &uimAttributesEdit)
@@ -63,7 +63,7 @@ router // Pages
 
 	router
 		.get("/modeller/attributeclasses", &uimAttributeClassesIndex)
-		.get("/modeller/attributeclasses/", &uimAttributeClassesIndex)
+		.get("/modeller/attributeclasses/:entityName", &uimAttributeClassesIndex)
 		.get("/modeller/attributeclasses/view", &uimAttributeClassesView)
 		.get("/modeller/attributeclasses/create", &uimAttributeClassesCreate)
 		.get("/modeller/attributeclasses/edit", &uimAttributeClassesEdit)
@@ -76,7 +76,7 @@ router // Pages
 
 router // Pages
 		.get("/modeller/classes", &uimClassesIndex)
-		.get("/modeller/classes/", &uimClassesIndex)
+		.get("/modeller/classes/:entityName", &uimClassesIndex)
 		.get("/modeller/classes/view", &uimClassesView)
 		.get("/modeller/classes/create", &uimClassesCreate)
 		.get("/modeller/classes/edit", &uimClassesEdit)
@@ -89,11 +89,11 @@ router // Pages
 
 	router
 		.get("/modeller/entityclasses", &uimEntityClassesIndex)
-		.get("/modeller/entityclasses/", &uimEntityClassesIndex)
 		.get("/modeller/entityclasses/view", &uimEntityClassesView)
 		.get("/modeller/entityclasses/create", &uimEntityClassesCreate)
 		.get("/modeller/entityclasses/edit", &uimEntityClassesEdit)
-		.get("/modeller/entityclasses/delete", &uimEntityClassesDelete);
+		.get("/modeller/entityclasses/delete", &uimEntityClassesDelete)
+		.get("/modeller/entityclasses/:entityName", &uimEntityClassesIndex);
 
 	router // EntityClasses Actions
 		.post("/modeller/entityclasses/actions/create", &uimEntityClassesCreateAction)
@@ -102,7 +102,7 @@ router // Pages
 
 router // Pages
 		.get("/modeller/interfaces", &uimInterfacesIndex)
-		.get("/modeller/interfaces/", &uimInterfacesIndex)
+		.get("/modeller/interfaces/:entityName", &uimInterfacesIndex)
 		.get("/modeller/interfaces/view", &uimInterfacesView)
 		.get("/modeller/interfaces/create", &uimInterfacesCreate)
 		.get("/modeller/interfaces/edit", &uimInterfacesEdit)
@@ -115,7 +115,7 @@ router // Pages
 
 	router
 		.get("/modeller/libraries", &uimLibrariesIndex)
-		.get("/modeller/libraries/", &uimLibrariesIndex)
+		.get("/modeller/libraries/:entityName", &uimLibrariesIndex)
 		.get("/modeller/libraries/view", &uimLibrariesView)
 		.get("/modeller/libraries/create", &uimLibrariesCreate)
 		.get("/modeller/libraries/edit", &uimLibrariesEdit)
@@ -128,7 +128,7 @@ router // Pages
 
 	router
 		.get("/modeller/methods", &uimMethodsIndex)
-		.get("/modeller/methods/", &uimMethodsIndex)
+		.get("/modeller/methods/:entityName", &uimMethodsIndex)
 		.get("/modeller/methods/view", &uimMethodsView)
 		.get("/modeller/methods/create", &uimMethodsCreate)
 		.get("/modeller/methods/edit", &uimMethodsEdit)
@@ -141,7 +141,7 @@ router // Pages
 
 	router
 		.get("/modeller/models", &uimModelsIndex)
-		.get("/modeller/models/", &uimModelsIndex)
+		.get("/modeller/models/:entityName", &uimModelsIndex)
 		.get("/modeller/models/view", &uimModelsView)
 		.get("/modeller/models/create", &uimModelsCreate)
 		.get("/modeller/models/edit", &uimModelsEdit)
@@ -154,7 +154,7 @@ router // Pages
 
 	router
 		.get("/modeller/modules", &uimModulesIndex)
-		.get("/modeller/modules/", &uimModulesIndex)
+		.get("/modeller/modules/:entityName", &uimModulesIndex)
 		.get("/modeller/modules/view", &uimModulesView)
 		.get("/modeller/modules/create", &uimModulesCreate)
 		.get("/modeller/modules/edit", &uimModulesEdit)
@@ -167,7 +167,7 @@ router // Pages
 
 	router
 		.get("/modeller/packages", &uimPackagesIndex)
-		.get("/modeller/packages/", &uimPackagesIndex)
+		.get("/modeller/packages/:entityName", &uimPackagesIndex)
 		.get("/modeller/packages/view", &uimPackagesView)
 		.get("/modeller/packages/create", &uimPackagesCreate)
 		.get("/modeller/packages/edit", &uimPackagesEdit)
