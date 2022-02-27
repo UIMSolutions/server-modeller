@@ -22,161 +22,18 @@ debug writeln("Setting router");
 router // Pages
 		.get("/modeller", &uimModellerPage);
 
-router // Pages
-		.get("/modeller/apis", &uimApisIndex)
-		.get("/modeller/apis/:entityName", &uimApisIndex)
-		.get("/modeller/apis/view", &uimApisView)
-		.get("/modeller/apis/create", &uimApisCreate)
-		.get("/modeller/apis/edit", &uimApisEdit)
-		.get("/modeller/apis/delete", &uimApisDelete);
-
-	router // Apis Actions
-		.post("/modeller/apis/actions/create", &uimApisCreateAction)
-		.post("/modeller/apis/actions/save", &uimApisUpdateAction)
-		.post("/modeller/apis/actions/delete", &uimApisDeleteAction);
-
-router // Pages
-		.get("/modeller/apps", &uimAppsIndex)
-		.get("/modeller/apps/:entityName", &uimAppsIndex)
-		.get("/modeller/apps/view", &uimAppsView)
-		.get("/modeller/apps/create", &uimAppsCreate)
-		.get("/modeller/apps/edit", &uimAppsEdit)
-		.get("/modeller/apps/delete", &uimAppsDelete);
-
-	router // Apps Actions
-		.post("/modeller/apps/actions/create", &uimAppsCreateAction)
-		.post("/modeller/apps/actions/save", &uimAppsUpdateAction)
-		.post("/modeller/apps/actions/delete", &uimAppsDeleteAction);
-
-	router // Pages
-		.get("/modeller/attributes", &uimAttributesIndex)
-		.get("/modeller/attributes/:entityName", &uimAttributesIndex)
-		.get("/modeller/attributes/view", &uimAttributesView)
-		.get("/modeller/attributes/create", &uimAttributesCreate)
-		.get("/modeller/attributes/edit", &uimAttributesEdit)
-		.get("/modeller/attributes/delete", &uimAttributesDelete);
-
-	router // Attributes Actions
-		.post("/modeller/attributes/actions/create", &uimAttributesCreateAction)
-		.post("/modeller/attributes/actions/save", &uimAttributesUpdateAction)
-		.post("/modeller/attributes/actions/delete", &uimAttributesDeleteAction);
-
-	router
-		.get("/modeller/attributeclasses", &uimAttributeClassesIndex)
-		.get("/modeller/attributeclasses/:entityName", &uimAttributeClassesIndex)
-		.get("/modeller/attributeclasses/view", &uimAttributeClassesView)
-		.get("/modeller/attributeclasses/create", &uimAttributeClassesCreate)
-		.get("/modeller/attributeclasses/edit", &uimAttributeClassesEdit)
-		.get("/modeller/attributeclasses/delete", &uimAttributeClassesDelete);
-
-	router // AttributeClasses Actions
-		.post("/modeller/attributeclasses/actions/create", &uimAttributeClassesCreateAction)
-		.post("/modeller/attributeclasses/actions/save", &uimAttributeClassesUpdateAction)
-		.post("/modeller/attributeclasses/actions/delete", &uimAttributeClassesDeleteAction);
-
-router // Pages
-		.get("/modeller/classes", &uimClassesIndex)
-		.get("/modeller/classes/:entityName", &uimClassesIndex)
-		.get("/modeller/classes/view", &uimClassesView)
-		.get("/modeller/classes/create", &uimClassesCreate)
-		.get("/modeller/classes/edit", &uimClassesEdit)
-		.get("/modeller/classes/delete", &uimClassesDelete);
-
-	router // Classes Actions
-		.post("/modeller/classes/actions/create", &uimClassesCreateAction)
-		.post("/modeller/classes/actions/save", &uimClassesUpdateAction)
-		.post("/modeller/classes/actions/delete", &uimClassesDeleteAction);
-
-	router
-		.get("/modeller/entityclasses", &uimEntityClassesIndex)
-		.get("/modeller/entityclasses/view", &uimEntityClassesView)
-		.get("/modeller/entityclasses/create", &uimEntityClassesCreate)
-		.get("/modeller/entityclasses/edit", &uimEntityClassesEdit)
-		.get("/modeller/entityclasses/delete", &uimEntityClassesDelete)
-		.get("/modeller/entityclasses/:entityName", &uimEntityClassesIndex);
-
-	router // EntityClasses Actions
-		.post("/modeller/entityclasses/actions/create", &uimEntityClassesCreateAction)
-		.post("/modeller/entityclasses/actions/save", &uimEntityClassesUpdateAction)
-		.post("/modeller/entityclasses/actions/delete", &uimEntityClassesDeleteAction);
-
-router // Pages
-		.get("/modeller/interfaces", &uimInterfacesIndex)
-		.get("/modeller/interfaces/:entityName", &uimInterfacesIndex)
-		.get("/modeller/interfaces/view", &uimInterfacesView)
-		.get("/modeller/interfaces/create", &uimInterfacesCreate)
-		.get("/modeller/interfaces/edit", &uimInterfacesEdit)
-		.get("/modeller/interfaces/delete", &uimInterfacesDelete);
-
-	router // Interfaces Actions
-		.post("/modeller/interfaces/actions/create", &uimInterfacesCreateAction)
-		.post("/modeller/interfaces/actions/save", &uimInterfacesUpdateAction)
-		.post("/modeller/interfaces/actions/delete", &uimInterfacesDeleteAction);
-
-	router
-		.get("/modeller/libraries", &uimLibrariesIndex)
-		.get("/modeller/libraries/:entityName", &uimLibrariesIndex)
-		.get("/modeller/libraries/view", &uimLibrariesView)
-		.get("/modeller/libraries/create", &uimLibrariesCreate)
-		.get("/modeller/libraries/edit", &uimLibrariesEdit)
-		.get("/modeller/libraries/delete", &uimLibrariesDelete);
-
-	router // Libraries Actions
-		.post("/modeller/libraries/actions/create", &uimLibrariesCreateAction)
-		.post("/modeller/libraries/actions/save", &uimLibrariesUpdateAction)
-		.post("/modeller/libraries/actions/delete", &uimLibrariesDeleteAction);
-
-	router
-		.get("/modeller/methods", &uimMethodsIndex)
-		.get("/modeller/methods/:entityName", &uimMethodsIndex)
-		.get("/modeller/methods/view", &uimMethodsView)
-		.get("/modeller/methods/create", &uimMethodsCreate)
-		.get("/modeller/methods/edit", &uimMethodsEdit)
-		.get("/modeller/methods/delete", &uimMethodsDelete);
-
-	router // Methods Actions
-		.post("/modeller/methods/actions/create", &uimMethodsCreateAction)
-		.post("/modeller/methods/actions/save", &uimMethodsUpdateAction)
-		.post("/modeller/methods/actions/delete", &uimMethodsDeleteAction);
-
-	router
-		.get("/modeller/models", &uimModelsIndex)
-		.get("/modeller/models/:entityName", &uimModelsIndex)
-		.get("/modeller/models/view", &uimModelsView)
-		.get("/modeller/models/create", &uimModelsCreate)
-		.get("/modeller/models/edit", &uimModelsEdit)
-		.get("/modeller/models/delete", &uimModelsDelete);
-
-	router // Models Actions
-		.post("/modeller/models/actions/create", &uimModelsCreateAction)
-		.post("/modeller/models/actions/save", &uimModelsUpdateAction)
-		.post("/modeller/models/actions/delete", &uimModelsDeleteAction);
-
-	router
-		.get("/modeller/modules", &uimModulesIndex)
-		.get("/modeller/modules/:entityName", &uimModulesIndex)
-		.get("/modeller/modules/view", &uimModulesView)
-		.get("/modeller/modules/create", &uimModulesCreate)
-		.get("/modeller/modules/edit", &uimModulesEdit)
-		.get("/modeller/modules/delete", &uimModulesDelete);
-
-	router // Modules Actions
-		.post("/modeller/modules/actions/create", &uimModulesCreateAction)
-		.post("/modeller/modules/actions/save", &uimModulesUpdateAction)
-		.post("/modeller/modules/actions/delete", &uimModulesDeleteAction);
-
-	router
-		.get("/modeller/packages", &uimPackagesIndex)
-		.get("/modeller/packages/:entityName", &uimPackagesIndex)
-		.get("/modeller/packages/view", &uimPackagesView)
-		.get("/modeller/packages/create", &uimPackagesCreate)
-		.get("/modeller/packages/edit", &uimPackagesEdit)
-		.get("/modeller/packages/delete", &uimPackagesDelete);
-
-	router // Packages Actions
-		.post("/modeller/packages/actions/create", &uimPackagesCreateAction)
-		.post("/modeller/packages/actions/save", &uimPackagesUpdateAction)
-		.post("/modeller/packages/actions/delete", &uimPackagesDeleteAction);
+	mixin(AddRoutes!("router", "/modeller/apis", "uimApis"));
+	mixin(AddRoutes!("router", "/modeller/apps", "uimApps"));
+	mixin(AddRoutes!("router", "/modeller/attributes", "uimAttributes"));
+	mixin(AddRoutes!("router", "/modeller/attributeclasses", "uimAttributeClasses"));
+	mixin(AddRoutes!("router", "/modeller/classes", "uimClasses"));
+	mixin(AddRoutes!("router", "/modeller/entityclasses", "uimEntityClasses"));
+	mixin(AddRoutes!("router", "/modeller/interfaces", "uimInterfaces"));
+	mixin(AddRoutes!("router", "/modeller/libraries", "uimLibraries"));
+	mixin(AddRoutes!("router", "/modeller/methods", "uimMethods"));
+	mixin(AddRoutes!("router", "/modeller/models", "uimModels"));
+	mixin(AddRoutes!("router", "/modeller/modules", "uimModules"));
+	mixin(AddRoutes!("router", "/modeller/packages", "uimPackages"));
 
 	router
 		.get("/", &uimIndex)
