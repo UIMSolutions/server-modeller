@@ -3,15 +3,15 @@ module servers.modeller.actions;
 @safe:
 import servers.modeller;
 
-public import servers.modeller.actions.apis;
-public import servers.modeller.actions.apps;
-public import servers.modeller.actions.attributes;
-public import servers.modeller.actions.attributeclasses;
-public import servers.modeller.actions.classes;
-public import servers.modeller.actions.entityclasses;
-public import servers.modeller.actions.interfaces;
-public import servers.modeller.actions.libraries;
-public import servers.modeller.actions.methods;
-public import servers.modeller.actions.models;
-public import servers.modeller.actions.modules;
-public import servers.modeller.actions.packages;
+mixin(ActionCalls!("uimApis", "MDLApi", "serverModeller"));
+mixin(ActionCalls!("uimApps", "MDLApp", "serverModeller"));
+mixin(ActionCalls!("uimAttributeClasses", "MDLAttributeClass", "serverModeller"));
+mixin(ActionCalls!("uimAttributes", "MDLAttribute", "serverModeller"));
+mixin(ActionCalls!("uimClasses", "MDLClass", "serverModeller"));
+mixin(ActionCalls!("uimEntityClasses", "MDLEntityClass", "serverModeller"));
+mixin(ActionCalls!("uimInterfaces", "MDLInterface", "serverModeller"));
+mixin(ActionCalls!("uimLibraries", "MDLLibrary", "serverModeller"));
+mixin(ActionCalls!("uimMethods", "MDLMethod", "serverModeller"));
+mixin(ActionCalls!("uimModels", "MDLModel", "serverModeller"));
+mixin(ActionCalls!("uimModules", "MDLModule", "serverModeller"));
+mixin(ActionCalls!("uimPackages", "MDLPackage", "serverModeller"));
