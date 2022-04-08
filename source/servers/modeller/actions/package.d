@@ -8,6 +8,7 @@ mixin(ActionCalls!("uimApps", "MDLApp", "serverModeller"));
 mixin(ActionCalls!("uimAttributeClasses", "MDLAttributeClass", "serverModeller"));
 mixin(ActionCalls!("uimAttributes", "MDLAttribute", "serverModeller"));
 mixin(ActionCalls!("uimClasses", "MDLClass", "serverModeller"));
+mixin(ActionCalls!("uimComponents", "MDLComponent", "serverModeller"));
 mixin(ActionCalls!("uimEntityClasses", "MDLEntityClass", "serverModeller"));
 mixin(ActionCalls!("uimInterfaces", "MDLInterface", "serverModeller"));
 mixin(ActionCalls!("uimLibraries", "MDLLibrary", "serverModeller"));
