@@ -14,10 +14,6 @@ void main(string[] args) {
 	debug writeln("SetRouterDefault!()");
   mixin(SetRouterDefault!());
 
-/* 	router
-		.get("/login", &servermodeller.loginPage.request)
-		.get("/logout", &servermodeller.logoutPage.request);
- */
 debug writeln("Setting router");
 router // Pages
 		.get("/modeller", &uimModellerPage);

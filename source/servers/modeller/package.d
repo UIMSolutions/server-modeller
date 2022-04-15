@@ -20,7 +20,6 @@ public import uim.modeller;
 public import servers.modeller.actions;
 public import servers.modeller.apis;
 public import servers.modeller.pages;
-public import servers.modeller.settings;
 
 public import models.systems;
 public import models.modeller;
@@ -29,10 +28,9 @@ public import layouts.tabler;
 
 // mixin(ImportLocal!("cms"));
 
-DAPPApplication serverModeller;
 string[size_t] errorMessages;
 static this() {
-  serverModeller = new class DAPPApplication {
+  server = new class DAPPApplication {
     this() { super(); 
       this
       .layout(MDLLayout)
