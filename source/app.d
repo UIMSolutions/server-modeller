@@ -82,9 +82,9 @@ router // Pages
 		debug writeln(tenant, " with ", database[tenant].collectionNames);
 	}
 
-	debug writeln("serverModeller.database(database)");
-  serverModeller.database(database);
-	// servermodeller.rootPath(rootPath).registerApp(router); 
+	debug writeln("server.database(database)");
+  server.database(database);
+	// server.rootPath(rootPath).registerApp(router); 
 
   mixin(SetHTTP!());
 	runApplication();
