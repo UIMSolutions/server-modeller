@@ -83,7 +83,7 @@ router // Pages
 	}
 
 	debug writeln("server.database(database)");
-  server.database(database);
+  thisServer.database(database);
 	// server.rootPath(rootPath).registerApp(router); 
 
   mixin(SetHTTP!());

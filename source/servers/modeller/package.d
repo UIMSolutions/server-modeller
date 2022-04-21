@@ -8,7 +8,7 @@ mixin ImportUim;
 public import colored;
 
 // Additional imports
-public import uim.systems;
+// public import uim.systems;
 public import uim.jsonbase;
 public import uim.entities;
 public import uim.entitybase;
@@ -30,7 +30,7 @@ public import layouts.tabler;
 
 string[size_t] errorMessages;
 static this() {
-  server = new class DAPPApplication {
+  thisServer = new class DAPPApplication {
     this() { super(); 
       this
       .layout(MDLLayout)

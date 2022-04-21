@@ -6,5 +6,5 @@ import servers.modeller;
 void uimModellerPage(HTTPServerRequest req, HTTPServerResponse res) {
   debugMethodCall(moduleName!uimModellerPage~":uimModellerPage");
 
-  MDLModellerPageController(serverModeller).request(req, res);
+  MDLModellerPageController(thisServer).request(req, res);
 }
