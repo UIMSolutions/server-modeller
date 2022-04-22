@@ -30,12 +30,9 @@ public import layouts.tabler;
 
 string[size_t] errorMessages;
 static this() {
-  thisServer = new class DAPPApplication {
-    this() { super(); 
-      this
-      .layout(MDLLayout)
-      .scripts.addLinks(
-        "/js/apps/modeller/app.js");
-    }
-  };
+  thisServer = APPApplication
+    .layout(MDLLayout);
+
+  thisServer.scripts.addLinks(
+    "/js/apps/modeller/app.js");
 }
