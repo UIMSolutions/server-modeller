@@ -21,10 +21,9 @@ router // Pages
 	mixin(AddRoutes!("router", "/modeller/apis", "uimApis"));
 	mixin(AddRoutes!("router", "/modeller/apps", "uimApps"));
 	mixin(AddRoutes!("router", "/modeller/attributes", "uimAttributes"));
-	mixin(AddRoutes!("router", "/modeller/attributeclasses", "uimAttributeClasses"));
 	mixin(AddRoutes!("router", "/modeller/classes", "uimClasses"));
 	mixin(AddRoutes!("router", "/modeller/components", "uimComponents"));
-	mixin(AddRoutes!("router", "/modeller/entityclasses", "uimEntityClasses"));
+	mixin(AddRoutes!("router", "/modeller/entityies", "uimEntityies"));
 	// mixin(AddRoutes!("router", "/modeller/functions", "uimFunctions"));
 	mixin(AddRoutes!("router", "/modeller/interfaces", "uimInterfaces"));
 	mixin(AddRoutes!("router", "/modeller/libraries", "uimLibraries"));
@@ -58,8 +57,8 @@ router // Pages
 		foreach(name; dbTentant.collectionNames) {
 			debug writeln("uimEntityRegistry name:", name, " path:", name);
 		
-			if (auto entityTemplate = uimEntityRegistry[name]) {
-				debug writeln("entityid = ", uimEntityRegistry[name].id);
+			if (auto entityTemplate = EntityRegistry[name]) {
+				debug writeln("entityid = ", EntityRegistry[name].id);
 		
 				dbTentant[name].entityTemplate(entityTemplate);
 	}}}
@@ -71,8 +70,8 @@ router // Pages
 		foreach(name; dbTentant.collectionNames) {
 			debug writeln("uimEntityRegistry name:", name, " path:", name);
 
-			if (auto entityTemplate = uimEntityRegistry[name]) {
-				debug writeln("entityid = ", uimEntityRegistry[name].id);
+			if (auto entityTemplate = EntityRegistry[name]) {
+				debug writeln("entityid = ", EntityRegistry[name].id);
 	
 				dbTentant[name].entityTemplate(entityTemplate);
 	}}}
