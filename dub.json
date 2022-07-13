@@ -10,8 +10,9 @@
 		"colored": "~>0.0.23",
 		"dini": "~>2.0.0",
 		"dyaml": "~>0.8.5",
-		"vibe-d": "~>0.9.4"
-	},
+		"vibe-d": "~>0.9.5-beta.1",
+		"vibe-d:tls": "*"
+  },
 	"description": "Server for modelling",
 	"importPaths": [
 		"../../LIBS/uim-core",
@@ -22,6 +23,7 @@
 		"../../LIBS/uim-html",
 		"../../LIBS/uim-bootstrap",
 		"../../LIBS/uim-apps",
+		"../../LIBS/uim-controls",
 		"../../LIBS/uim-servers",
 		"../../LIBS/uim-modeller",
 		"../../LIBS/uim-jsonbase",
@@ -43,6 +45,7 @@
 		"../../LIBS/uim-html",
 		"../../LIBS/uim-bootstrap",
 		"../../LIBS/uim-apps",
+		"../../LIBS/uim-controls",
 		"../../LIBS/uim-servers",
 		"../../LIBS/uim-modeller",
 		"../../LIBS/uim-jsonbase",
