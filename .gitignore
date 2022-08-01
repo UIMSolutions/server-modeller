@@ -13,3 +13,18 @@ server-modeller-test-*
 *.o
 *.obj
 *.lst
+dub.selections.json
+server-modeller (copy)
+server-modeller20220302
+server-modeller20220304
+server-modeller20220305
+logs/server-modeller-http-20220715T124636.0526596.log
+logs/server-modeller-http-20220715T125306.1073245.log
+logs/server-modeller-http-20220715T125328.4824079.log
+logs/server-modeller-http-20220719T100043.2679515.log
+dub.selections.json
+logs/server-modeller-http-20220726T090918.7936962.log
+logs/server-modeller-http-20220726T092807.3531082.log
+logs/server-modeller-http-20220726T180207.3085334.log
+logs/server-modeller-http-20220726T181035.6693687.log
+.gitignore
