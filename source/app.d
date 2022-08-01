@@ -23,6 +23,8 @@ router // Pages
 	mixin(AddRoutes!("router", "/modeller/attributes", "uimAttributes"));
 	mixin(AddRoutes!("router", "/modeller/classes", "uimClasses"));
 	mixin(AddRoutes!("router", "/modeller/components", "uimComponents"));
+	mixin(AddRoutes!("router", "/modeller/controls", "uimControls"));
+	mixin(AddRoutes!("router", "/modeller/elements", "uimElements"));
 	mixin(AddRoutes!("router", "/modeller/entities", "uimEntities"));
 	// mixin(AddRoutes!("router", "/modeller/functions", "uimFunctions"));
 	mixin(AddRoutes!("router", "/modeller/interfaces", "uimInterfaces"));
