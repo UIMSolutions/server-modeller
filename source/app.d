@@ -34,6 +34,10 @@ router // Pages
 	mixin(AddRoutes!("router", "/modeller/modules", "uimModules"));
 	mixin(AddRoutes!("router", "/modeller/packages", "uimPackages"));
 
+router
+  .post("/modeller/entities/actions/attributes/add", &uimAddAttributesToEntityAction)
+  .post("/modeller/entities/actions/attributes/remove", &uimRemoveAttributesFromEntityAction);
+
 	router
 		.get("/", &uimIndex)
 		.get("/login", &uimLoginPage)
