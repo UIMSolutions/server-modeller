@@ -8,7 +8,7 @@ void uimServer(HTTPServerRequest req, HTTPServerResponse res) {
   STRINGAA reqParameters = readRequestParameters(req, null); 
 
   auto myController = APPPageController;
-  myController.view(APPView.layout(MDLLayout));
+  myController.view(View.layout(MDLLayout));
 
   auto responseContent = myController.view.render(reqParameters); 
   res.writeBody(responseContent, "text/html");
