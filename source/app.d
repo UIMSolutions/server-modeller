@@ -83,9 +83,7 @@ router
 	}}}
 
 	debug writeln("database.tenantNames -> ", database.tenantNames);
-	foreach(tenant; database.tenantNames) {
-		debug writeln(tenant, " with ", database[tenant].collectionNames);
-	}
+	database.tenantNames.each!(tenantName => debug writeln(tenantName, " with ", database[tenantName].collectionNames));
 
 	debug writeln("server.database(database)");
   thisServer.database(database);
